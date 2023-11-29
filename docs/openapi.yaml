@@ -304,3 +304,40 @@ components:
           languages:
             - name: TypeScript
               bytes: 74882
+    TeratailReply:
+      type: object
+      description: Teratailの回答
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        is_best_answer:
+          type: boolean
+        tags:
+          type: array
+          items:
+            type: string
+        created_at:
+          type: string
+      required:
+        - title
+        - url
+        - is_best_answer
+        - tags
+        - created_at
+      examples:
+        - title: hoge
+          url: "https://teratail.com/hoge"
+          is_best_answer: true
+          tags:
+            - TypeScript
+          created_at: "2020-07-09T20:22:46"
+      x-examples:
+        Example 1:
+          title: hoge
+          url: "https://teratail.com/hoge"
+          is_best_answer: true
+          tags:
+            - TypeScript
+          created_at: "2020-07-09T20:22:46"
