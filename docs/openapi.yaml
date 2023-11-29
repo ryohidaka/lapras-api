@@ -55,3 +55,34 @@ components:
             - bar
           stockers_count: 3
           updated_at: "020-07-26T08:10:11"
+    ZennArticle:
+      type: object
+      description: Zenn記事
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        posted_at:
+          type: string
+      required:
+        - title
+        - url
+        - tags
+      examples:
+        - title: hoge
+          url: "https://zenn.dev/hoge"
+          tags:
+            - foo
+          posted_at: "2022-10-03T08:36:43"
+      x-examples:
+        Example 1:
+          title: hoge
+          url: "https://zenn.dev/hoge"
+          tags:
+            - foo
+          posted_at: "2022-10-03T08:36:43"
