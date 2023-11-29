@@ -202,3 +202,105 @@ components:
           view_count: 1
           star_count: 2
           presentation_date: "2022-10-03T08:36:43"
+    GitHubRepository:
+      type: object
+      description: GitHubリポジトリ
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        url:
+          type: string
+        is_oss:
+          type: boolean
+        is_fork:
+          type: boolean
+        is_owner:
+          type: boolean
+        description:
+          type: string
+        stargazers_count:
+          type: integer
+        stargazers_url:
+          type: string
+        forks:
+          type: integer
+        contributors_count:
+          type: integer
+        contributors_url:
+          type: string
+        contributions:
+          type: integer
+        contributions_url:
+          type: string
+        language:
+          type: string
+        languages:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              bytes:
+                type: integer
+            required:
+              - name
+              - bytes
+      required:
+        - id
+        - title
+        - url
+        - is_oss
+        - is_fork
+        - is_owner
+        - description
+        - stargazers_count
+        - stargazers_url
+        - forks
+        - contributors_count
+        - contributors_url
+        - contributions
+        - contributions_url
+        - language
+        - languages
+      examples:
+        - id: 1
+          title: lapras-inc/foo
+          url: "https://github.com/lapras-inc/foo"
+          is_oss: false
+          is_fork: false
+          is_owner: true
+          description: bar
+          stargazers_count: 211
+          stargazers_url: "https://github.com/lapras-inc/foo/stargazers"
+          forks: 22
+          contributors_count: 14
+          contributors_url: "https://github.com/lapras-inc/foo/graphs/contributors"
+          contributions: 313
+          contributions_url: "https://github.com/klapras-inc/foo/g/commits?author=hoge"
+          language: TypeScript
+          languages:
+            - name: TypeScript
+              bytes: 74882
+      x-examples:
+        Example 1:
+          id: 1
+          title: lapras-inc/foo
+          url: "https://github.com/lapras-inc/foo"
+          is_oss: false
+          is_fork: false
+          is_owner: true
+          description: bar
+          stargazers_count: 211
+          stargazers_url: "https://github.com/lapras-inc/foo/stargazers"
+          forks: 22
+          contributors_count: 14
+          contributors_url: "https://github.com/lapras-inc/foo/graphs/contributors"
+          contributions: 313
+          contributions_url: "https://github.com/klapras-inc/foo/g/commits?author=hoge"
+          language: TypeScript
+          languages:
+            - name: TypeScript
+              bytes: 74882
