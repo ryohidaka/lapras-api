@@ -155,3 +155,50 @@ components:
             - foo
           like_count: 3
           published_at: "2022-10-03T08:36:43"
+    SpeakerDeckSlide:
+      type: object
+      description: SpeakerDeckスライド
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        description:
+          type: string
+        view_count:
+          type: integer
+        star_count:
+          type: integer
+        presentation_date:
+          type: string
+      required:
+        - title
+        - url
+        - tags
+        - description
+        - view_count
+        - star_count
+        - presentation_date
+      examples:
+        - title: hoge
+          url: "https://speakerdeck.com/hoge"
+          tags:
+            - foo
+          description: foo
+          view_count: 1
+          star_count: 2
+          presentation_date: "2022-10-03T08:36:43"
+      x-examples:
+        Example 1:
+          title: hoge
+          url: "https://speakerdeck.com/hoge"
+          tags:
+            - foo
+          description: foo
+          view_count: 1
+          star_count: 2
+          presentation_date: "2022-10-03T08:36:43"
