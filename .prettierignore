@@ -1,3 +1,6 @@
 # Ignore artifacts:
 build
 coverage
+
+# Openapi Generator
+src/types/typescript-fetch
