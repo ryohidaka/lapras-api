@@ -86,3 +86,35 @@ components:
           tags:
             - foo
           posted_at: "2022-10-03T08:36:43"
+    BlogArticle:
+      type: object
+      description: ブログ記事
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        posted_at:
+          type: string
+      required:
+        - title
+        - url
+        - tags
+        - posted_at
+      examples:
+        - title: hoge
+          url: "https://blog.com/hoge"
+          tags:
+            - foo
+          posted_at: "2022-10-03T08:36:43"
+      x-examples:
+        Example 1:
+          title: hoge
+          url: "https://blog.com/hoge"
+          tags:
+            - foo
+          posted_at: "2022-10-03T08:36:43"
