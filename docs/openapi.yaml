@@ -379,3 +379,40 @@ components:
           date: "2022-12-03T00:00:00"
           is_presenter: false
           is_organizer: false
+    Activity:
+      type: object
+      description: Activity Log
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        date:
+          type: string
+        type:
+          enum:
+            - github
+            - speaker_deck
+            - qiita
+            - zenn
+            - note
+            - teratail
+            - blog
+            - connpass
+          readOnly: true
+      required:
+        - title
+        - url
+        - date
+        - type
+      examples:
+        - title: lapras-inc/hoge
+          url: "https://github.com/lapras-inc/hoge"
+          date: "2022-12-10T11:25:37"
+          type: github
+      x-examples:
+        Example 1:
+          title: lapras-inc/hoge
+          url: "https://github.com/lapras-inc/hoge"
+          date: "2022-12-10T11:25:37"
+          type: github
