@@ -7,3 +7,51 @@ info:
 servers:
   - url: "https://lapras.com/public"
 paths: {}
+components:
+  schemas:
+    QiitaArticle:
+      type: object
+      description: Qiita記事
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        headlines:
+          type: array
+          items:
+            type: string
+        stockers_count:
+          type: integer
+        updated_at:
+          type: string
+      required:
+        - title
+        - url
+        - tags
+        - headlines
+        - stockers_count
+        - updated_at
+      examples:
+        - title: hogehoge
+          url: "https://qiita.com/hogehoge"
+          tags:
+            - foo
+          headlines:
+            - bar
+          stockers_count: 3
+          updated_at: "020-07-26T08:10:11"
+      x-examples:
+        Example 1:
+          title: hogehoge
+          url: "https://qiita.com/hogehoge"
+          tags:
+            - foo
+          headlines:
+            - bar
+          stockers_count: 3
+          updated_at: "020-07-26T08:10:11"
