@@ -118,3 +118,40 @@ components:
           tags:
             - foo
           posted_at: "2022-10-03T08:36:43"
+    NoteArticle:
+      type: object
+      description: note記事
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        like_count:
+          type: integer
+        published_at:
+          type: string
+      required:
+        - title
+        - url
+        - tags
+        - like_count
+        - published_at
+      examples:
+        - title: hoge
+          url: "https://note.com/hoge"
+          tags:
+            - foo
+          like_count: 3
+          published_at: "2022-10-03T08:36:43"
+      x-examples:
+        Example 1:
+          title: hoge
+          url: "https://note.com/hoge"
+          tags:
+            - foo
+          like_count: 3
+          published_at: "2022-10-03T08:36:43"
