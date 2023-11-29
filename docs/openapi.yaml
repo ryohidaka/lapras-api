@@ -1,0 +1,9 @@
+openapi: 3.1.0
+info:
+  version: "1.0"
+  title: LAPRAS Public API
+  summary: lapras-public-api-schema
+  description: LAPRAS公開ページAPIの仕様書
+servers:
+  - url: "https://lapras.com/public"
+paths: {}
