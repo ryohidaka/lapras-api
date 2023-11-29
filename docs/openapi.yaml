@@ -341,3 +341,41 @@ components:
           tags:
             - TypeScript
           created_at: "2020-07-09T20:22:46"
+    Event:
+      type: object
+      description: イベント参加
+      properties:
+        title:
+          type: string
+        url:
+          type: string
+        status:
+          type: integer
+        date:
+          type: string
+        is_presenter:
+          type: boolean
+        is_organizer:
+          type: boolean
+      required:
+        - title
+        - url
+        - status
+        - date
+        - is_presenter
+        - is_organizer
+      examples:
+        - title: hoge
+          url: "https://hoge.connpass.com/event/"
+          status: 1
+          date: "2022-12-03T00:00:00"
+          is_presenter: false
+          is_organizer: false
+      x-examples:
+        Example 1:
+          title: hoge
+          url: "https://hoge.connpass.com/event/"
+          status: 1
+          date: "2022-12-03T00:00:00"
+          is_presenter: false
+          is_organizer: false
