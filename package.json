@@ -2,6 +2,10 @@
   "name": "lapras-api",
   "version": "0.1.0",
   "description": "LAPRAS Public API Client for Node.js",
+  "keywords": [
+    "lapras",
+    "api"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
