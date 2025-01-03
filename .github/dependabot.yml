@@ -13,3 +13,7 @@ updates:
       - ryohidaka
     reviewers:
       - ryohidaka
+    groups:
+      dependencies:
+        patterns:
+          - "*"
